@@ -46,26 +46,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="BlackJack.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="BlackJack.Designer.cs">
+      <DependentUpon>BlackJack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mines.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mines.Designer.cs">
+      <DependentUpon>Mines.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signin.Designer.cs">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="appData.cs" />
+    <Compile Include="GameSelection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GameSelection.Designer.cs">
+      <DependentUpon>GameSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Slots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slots.Designer.cs">
+      <DependentUpon>Slots.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BlackJack.resx">
+      <DependentUpon>BlackJack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signin.resx">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameSelection.resx">
+      <DependentUpon>GameSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +128,225 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\62123224-9216-4bed-a934-cc28afc58104.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99cd96d0-fb10-4b4c-b92b-be256ddc6e66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99cd96d0-fb10-4b4c-b92b-be256ddc6e661.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99cd96d0-fb10-4b4c-b92b-be256ddc6e662.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-672556284-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-672556284-612x6121.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gambling-addiction-poker %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gambling-addiction-poker %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gambling-addiction-poker %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gambling-addiction-poker %281%293.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\61449.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9b2c5042-2b30-491a-a09b-7238c7205e84.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bce5f3e6-84c8-4c9b-9f52-91977ad3c340.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_325384191_sg1D5lYWfRedGQsBm8xIHnsSAUUUVxGE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenu_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mainmenu_bg%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bjbg.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blackjacklogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\2_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\3_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\4_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\5_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\6_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\7_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\8_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\9_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\10_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\ace_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\jack_of_diamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\king_of_diamonds2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Diamonds\queen_of_diamonds2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\2_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\3_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\4_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\5_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\6_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\7_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\8_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\9_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\10_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\ace_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\jack_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\king_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Clubs\queen_of_clubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\2_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\3_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\4_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\5_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\6_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\7_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\8_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\9_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\10_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\ace_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\jack_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\king_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Hearts\queen_of_hearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\2_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\3_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\4_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\5_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\6_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\7_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\8_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\9_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\10_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\ace_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\ace_of_spades2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\jack_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\king_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cards\Spades\queen_of_spades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dealerLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

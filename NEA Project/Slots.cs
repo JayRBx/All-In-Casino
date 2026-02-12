@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace NEA_Project
 {
-    public partial class Form1 : Form
+    public partial class Slots: Form
     {
-        public Form1()
+        public Slots()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

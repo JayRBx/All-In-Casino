@@ -12,11 +12,11 @@ namespace NEA_Project
     public static class appData
     {
         public static string username;
-        public static float balance = -1;
+        public static float balance = 1000;
         public static char currency = '£';
 
-        public static string[] cardSuits = { "Hearts", "Diamonds", "Clubs", "Spades" };
-        public static string[] cardValue = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace" };
+        public static string[] cardSuits = { "hearts", "diamonds", "clubs", "spades" };
+        public static string[] cardValue = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace" };
 
         public static void RoundControl(Control c, int radius)
         {

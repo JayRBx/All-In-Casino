@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Drawing.Text;
+using NEA_Project.Properties;
 
 namespace NEA_Project
 {
@@ -20,7 +21,7 @@ namespace NEA_Project
         {
             InitializeComponent();
 
-            betDisplayPnl.Visible = false;
+            betPnl.Visible = false;
 
             balanceTxt.Text = appData.balance.ToString();
             appData.RoundControl(balancePnl, 50);
@@ -67,6 +68,22 @@ namespace NEA_Project
 
             appData.RoundControl(betDisplayPnl, 50);
 
+            appData.RoundControl(hitBtn, 25);
+            appData.SetupButton(hitBtn);
+
+            appData.RoundControl(standBtn, 25);
+            appData.SetupButton(standBtn);
+
+            appData.RoundControl(doubleBtn, 25);
+            appData.SetupButton(doubleBtn);
+
+            appData.RoundControl(splitBtn, 25);
+            appData.SetupButton(splitBtn);
+
+            appData.RoundControl(surrenderBtn, 50);
+            appData.SetupButton(surrenderBtn);
+
+            splitCardsPnl.Visible = false;
         }
 
         private void bettingAmountBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -127,12 +144,84 @@ namespace NEA_Project
 
         private void BlackJack_GameStart()
         {
+            Random rnd = new Random();
             bettingPnl.Visible = false;
-            betDisplayPnl.BringToFront();
-            betDisplayPnl.Visible = true;
+            betPnl.Visible = true;
             betAmountLbl.Text = $"Bet: {appData.currency}{gambleAmount}";
 
-            playerCard1.Image = Properties.Resources._10_of_clubs;
+
+            //Player Init
+
+            string[] playerCardsImg = new string[5];
+            int playerCardValues = 0;
+            int playerCardCount = 0;
+
+            for(int i = 0; i < 2; i++)
+            {
+                int cardSuitIndex = rnd.Next(0, 4);
+                int cardValueIndex = rnd.Next(0, 13);
+
+                playerCardsImg[i] = $"_{appData.cardValue[cardValueIndex]}_of_{appData.cardSuits[cardSuitIndex]}";
+
+                if (cardValueIndex == 12) // Jack, Queen, King
+                {
+                    playerCardValues += 11;
+                }
+                else if (cardValueIndex >= 9) // Ace
+                {
+                    playerCardValues += 10; // Will handle Ace value adjustment later
+                }
+                else
+                {
+                    playerCardValues += cardValueIndex + 2; // cardValueIndex starts at 0 for "2"
+                }
+
+
+                playerCardCount++;
+            }
+
+            playerCard1.BackgroundImage = Resources.ResourceManager.GetObject(playerCardsImg[0]) as Image;
+            playerCard2.BackgroundImage = Resources.ResourceManager.GetObject(playerCardsImg[1]) as Image;
+
+
+            //Dealer Init
+            string[] dealerCardsImg = new string[5];
+            int dealerCardValues = 0;
+            int dealerCardCount = 0;
+
+            while (dealerCardCount < 2)
+            {
+                int cardSuitIndex = rnd.Next(0, 4);
+                int cardValueIndex = rnd.Next(0, 13);
+
+                dealerCardsImg[dealerCardCount] = $"_{appData.cardValue[cardValueIndex]}_of_{appData.cardSuits[cardSuitIndex]}";
+
+                if (cardValueIndex == 12) // Jack, Queen, King
+                {
+                    dealerCardValues += 11;
+                }
+                else if (cardValueIndex >= 9) // Ace
+                {
+                    dealerCardValues += 10; // Will handle Ace value adjustment later
+                }
+                else
+                {
+                    dealerCardValues += cardValueIndex + 2; // cardValueIndex starts at 0 for "2"
+                }
+
+
+                dealerCardCount++;
+            }
+
+            dealerCard1.BackgroundImage = Resources.ResourceManager.GetObject(dealerCardsImg[0]) as Image;
+            dealerCard2.BackgroundImage = Resources.ResourceManager.GetObject(dealerCardsImg[1]) as Image;
+        }
+
+        private void returnImg_Click(object sender, EventArgs e)
+        {
+            GameSelection gameSelection = new GameSelection();
+            gameSelection.Show();
+            this.Close();
         }
     }
 }

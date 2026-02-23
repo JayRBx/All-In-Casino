@@ -348,5 +348,8 @@
   <ItemGroup>
     <None Include="Resources\dealerLogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\{7A4717D0-1FE2-42F4-A673-7627588E90B4}.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -185,9 +185,6 @@ namespace NEA_Project
 
 
             //Dealer Init
-            string[] dealerCardsImg = new string[5];
-            int dealerCardValues = 0;
-            int dealerCardCount = 0;
 
             while (dealerCardCount < 2)
             {
